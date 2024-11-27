@@ -1,0 +1,307 @@
+---
+title: "Privacy Invasion and Algorithmic Control of Platform Gig Economy Workers in India"
+author: 
+    - Paul
+    - Caro
+
+format:
+    revealjs: 
+        theme: serif
+        transition: slide
+        width: 1920
+        height: 1080
+        toc: true
+        toc-depth: 1
+        slide-number: c/t
+---
+
+
+
+# Gig Workers global and local
+
+# 
+
+:::{.r-fit-text}
+[7 Milion]{style="color:#BF6900;"} <br>
+[Gig workers]{style="color:#62929E;"}
+:::
+
+
+
+#
+
+```{r}
+#| eval: false
+#| freeze: true
+library(ggplot2)
+library(gganimate)
+library(dplyr)
+library(gifski)
+
+# Define the years and corresponding population projections
+years <- 2020:2030
+population <- seq(7, 33, length.out = length(years)) * 1e6  # Population in millions
+
+# Create a data frame
+population_data <- data.frame(
+  Year = years,
+  Population = population
+)
+
+# Create the static plot
+p <- ggplot(population_data, aes(x = Year, y = Population)) +
+  geom_line(color = "blue", size = 1) +
+  geom_point(color = "red", size = 2) +
+  scale_y_continuous(labels = scales::comma) +
+  labs(
+    title = 'Projected Population Growth: {frame_time}',
+    x = 'Year',
+    y = 'Population',
+    caption = 'Source: Modeled Data'
+  ) +
+  theme_minimal()
+
+# Animate the plot
+animated_plot <- p +
+  transition_reveal(Year)
+
+# Render and save the animation
+animate(animated_plot, nframes = 100, fps = 10, renderer = gifski_renderer("population_growth.gif"))
+
+```
+
+
+
+
+
+## Privacy and Data Protection in India
+
+
+
+:::{.incremental}
+- Personal data Protection 
+    - DPDPA
+
+- Non personal data protection
+    - DAU policy
+:::
+
+
+
+
+
+## Personal Data Protection - DPDPA​ 
+
+| **Aspect**             | **Digital Personal Data Protection Act (DPDPA)**                                                                                     | **Data Accessibility and Use (DAU) Policy**                                                                                                                   |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Purpose**            | Safeguards individuals' privacy rights and outlines legitimate grounds for processing personal data.                                 | Aims to preserve collective privacy and prevent harms in the era of AI and data analytics.                                                                    |
+| **Individual Rights**  | Ensures rights to access, correct, and erase personal data.                                                                          | Emphasizes anonymizing personal data to create non-personal data (NPD) for public benefit.                                                                    |
+| **Data Processing**    | Permits processing of personal data for legitimate reasons specified in the statute.                                                 | Mandates sharing of non-personal or anonymized data to enhance service delivery and policy formulation.                                                       |
+| **Dispute Resolution** | Introduces provisions for electronically mediated alternative dispute resolutions.                                                   | Establishes safeguards around data anonymization and de-anonymization to prevent re-identification and uphold privacy principles.                             |
+| **Regulatory Bodies**  | Establishes the Data Protection Board of India and designates the Telecom Disputes Settlement and Appellate Tribunal.                | Addresses mixed datasets (containing both personal and non-personal data) under personal data protection standards, aligning with practices like the GDPR in Europe. |
+
+
+## Non-personal Data Protection – DAU Policy​
+
+
+# Impact
+
+## Impact of Data Protection Regulations on Platform Gig Economy​
+
+
+
+
+
+
+
+
+## Gaps in Existing Policy Instruments​ {.smaller}
+
+**Personal data​** 
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Exception for processing data without consent, if the data collected is required to assess employees’ work performance and to recruit/terminate employees. Employers such as platform companies can authorise the collection of troves of personal data without consent under the garb of ‘reasonable expectation’.​
+:::
+
+
+::: {.fragment .fade-in-then-semi-out}
+- Whether this exception extends to gig-workers, who have not conclusively been categorised as “employees” yet​
+
+- Data can also be processed without consent for ‘reasonable purposes’ like fraud prevention.​
+
+:::
+
+
+::: {.fragment .fade-in-then-semi-out}
+
+- Contains provisions related to ‘deemed consent’ to access and process data - allows for the automatic processing of a data principal’s personal data for the purposes of employment, including recruitment, verification of attendance and assessment of performance, among others.
+:::
+
+# Proposed Solutions {auto-animate=true}
+
+## {auto-animate=true}
+
+- Active consent, not deemed consent, for data collection, processing and exchange should be the express requirement in the context of data fiduciary (here, platforms) – data principal (here, gig workers) relationships.​
+
+- Reduce scope of consent override - A mandatory obligation should be imposed on the employer to consult employees and seek their views prior to processing personal data. Data Protection Authority proposed by the act should be entrusted with the responsibility of issuing a Code of Practice for workplace surveillance.​
+- Create market alternatives to the big tech companies - States like Kerala and Karnataka are stepping up with alternatives like the Kerala Savaari app and Namma Yatri app, offering market-driven solutions that prioritise both drivers and consumers. ​
+
+- Platform Work Directive (PWD) – EU directive worth following in India; consists a clause on “presumption of employment”—which means workers shall be legally presumed as employees if their link with their platform meets at least two out of five specific criteria, which include: control over pay and working hours; performance monitoring; task allocation and distribution; control over working conditions; and restrictions on work organisation.​
+​
+
+
+## Implementation Timeline
+
+
+```{mermaid}
+timeline
+    title Timeline of Digital Personal Data Protection and Privacy Developments in India
+    2008 : Amendment to Information Technology Act, 2000 (IT Act): Obligation on companies to safeguard sensitive personal data by implementing security measures
+    2011 : Sensitive Personal Data or Information (SPDI) Rules: Minimum requirements for data protection, including privacy policies, consent for data collection/transfer, and notifications about recipients
+    2012 : Justice AP Shah Committee: Issued 9 national privacy principles; recommended overarching privacy protection law
+    2017 : Puttuswamy Judgement: Right to privacy upheld as a fundamental freedom; foundation for data protection legislation
+    2018 : Draft Personal Data Protection Bill introduced
+    2022 : Draft Data Accessibility & Use Policy (DAU Policy): Regulates non-personal data usage and maximizes access to public sector NPD
+    2022-11-18 : Ministry of Electronics and Information Technology released the Digital Personal Data Protection Bill, 2022 for public consultation
+    2023-07-05 : Cabinet approved the Digital Personal Data Protection Bill, 2023 (revised version of the 2022 bill)
+    2023-08-03 : Digital Personal Data Protection Bill, 2023 introduced in Lok Sabha (lower house of Parliament of India)
+    2023-08-07 : Digital Personal Data Protection Bill, 2023 passed by Lok Sabha
+    2023-08-09 : Digital Personal Data Protection Bill, 2023 introduced and passed by Rajya Sabha (upper house of Parliament of India)
+    2023-08-11 : President of India gave assent to the Digital Personal Data Protection Bill, 2023, making it the Digital Personal Data Protection Act, 2023
+
+```
+
+
+# 
+
+![](https://mermaid.ink/img/pako:eNqdVU2P2zYQ_SsDHQovYKNeL4pNlJMb97BF0xrrzaXwZUyOpGkoUuWHt26Q_54hbWvjoEHrGj6I4nDemzePo4-Vcpqquorck2FLWwvyixwNwdPpHbgGVtxyRANr8sFZeVhhRFh7F0lFdhbQalnyHtUBVrQn44aebAzAFh6sZjxmXsznr6CGpezpvA_RyXbjfI8lzROpzjrj2gMsVZzm-DlMHp7y6qaG33aG22Ok_JXrB7RMIWcJ2FCb0GsIZANH3hMMZ7Y6s90dgPvBUMZl20qcSp7jAXrCkDyFM8XbW6G4GbNc1uz8BeHJZr16uIHHZCjU8I4t96kHT38m9nRUQIKPBIZRrqnIokzSmcZwUm1whpUUM5W6bMjajAeVM-Z48Pvo0YaG_LQobl3khlWhEgB3LkXBVjxwRh7rWUg9P6cQWREs17DpsIO3ru85RqIaHkJIpOE12JJIKh05eeHJoll4k_PKEembhLo9efSqu-D_YgaDzyP2vWCvU4wpPGN_EBq6LbrU8MhtVwxwzpCGjowGlEqgSVZjjhM2jSfSrn8jguS3BeIfRAVDLQdT9kf47LaVxyZ-27o_sjHSj-idTor0-ehiMR4tJ5ZKUQi8Y5M98x28D2KN3LMDTFbL96dnMemj-FBYiC2ts7NLD6aALZXW9fgX9_y3RGFJXIRI4m-VjRmlvF_Xqxcus9vbWSkmWyxEf8i38qfsCu8sq1ByfuMmeTLicGlb7Ojfb3KWY3qsP4t84pQ9mUy8EHdxN5vfz-Y_CKu3uJNJEQEH6cf-aqg7mHjac-YozgrlfjclR-EhmpubL1FfzeZ3uTtXALw0OI-kX9wH2OCuQ5gY90weOpdCmXRr9IaL8_KqjK6voe-vhB4w5Mpk_oywX2V8_f-LyX1_AXjEPw54riwNw3WVlcG3lknI-ssoaFHGYMY4DuwrezsVr3_Ik4Ljfzt6mvyLu2pa9SSGZi2fqI-Z67aSDD1tq1oeNTUontxWW_tJQjFFtzlYVdXRJ5pW3qW2q-oGTZBVGuQC0oqx9difQ-Tz8btz_RhEmuXmvTt-E8XyDbfVp88OqXCn?type=png)
+
+
+## Timeline
+
+<script src="https://gist.github.com/Paul-Elvis-Otto/98b41830c24569b87704cddf9f93928a.js"></script>
+
+
+# Implementation
+
+![](icons/institution_icon.svg){.nostretch fig-align="right" width="500px"}
+
+
+
+
+
+
+
+
+## Strength of Institutions in India
+
+:::{.fragment .fade-in-then-semi-out}
+|                   | Democracy          | Non-Democracy     |
+|-------------------|--------------------|-------------------|
+| **Strong Institutions** |                    |                   |
+| **Weak Institutions**   | India             |                   |
+:::
+
+
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+India is a **democracy with weak institutions**
+
+- The gig economy’s growth exacerbates existing challenges in labor rights, data privacy, and algorithmic control.
+:::
+:::
+
+## Strength of Institutions in India
+
+```{r}
+library(ggplot2)
+
+# Create a data frame for the point
+data <- data.frame(
+  x = 0.5,
+  y = 0.45,
+  label = "India"
+)
+
+# Create the plot
+ggplot(data, aes(x = x, y = y)) +
+  geom_point(size = 5, color = "#62929E") + # Add the point
+  geom_text(aes(label = label), hjust = -0.2, vjust = 0.5, size = 5) + # Add the label
+  scale_x_continuous(name = "Quality of Elections", limits = c(0, 1),
+                     breaks = c(0, 0.5, 1), labels = c("low", "", "high")) +
+  scale_y_continuous(name = "Protection of Civil Liberties", limits = c(0, 1),
+                     breaks = c(0, 0.5, 1), labels = c("low", "", "high")) +
+  ggtitle("") + # Add title
+  theme_minimal(base_size = 14) + # Minimal theme for clean look
+  theme(
+    plot.title = element_text(hjust = 0.5), # Center title
+    plot.background = element_rect(fill = "#F0F1EC", color = NA), # Set background color
+    panel.background = element_rect(fill = "#F0F1EC", color = NA), # Panel background
+    panel.grid.major = element_blank(),    # Remove major gridlines
+    panel.grid.minor = element_blank(),    # Remove minor gridlines
+    axis.line = element_line(color = "black"), # Make axes visible
+    axis.ticks = element_line(color = "black") # Add ticks to axes
+  )
+
+```
+
+
+# Comparative Views and Approaches
+
+
+
+# The GDPR and the DPDPA {.unlisted}
+
+| **Aspect**                 | **GDPR (UK/EU)**                                                                 | **DPDPA (India)**                                                          |
+|----------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Scope**                  | Applies to all entities processing data of EU/UK residents.                     | Applies to processing of personal data in India and data of Indian residents. |
+| **Consent**                | Explicit, freely given, specific, and informed.                                  | Requires clear consent, with an option to withdraw.                        |
+| **Individual Rights**      | Includes right to access, rectify, erase, restrict processing, and data portability. | Includes right to access, correction, erasure, and grievance redressal.    |
+| **Enforcement Body**       | Independent national supervisory authorities in each country.                    | Data Protection Board of India.                                            |
+| **Penalties for Non-Compliance** | Up to €20 million or 4% of global annual turnover, whichever is higher.         | Up to ₹250 crore (~€28 million).                                           |
+| **Cross-Border Data Transfer** | Permitted with adequate safeguards (e.g., adequacy decisions).                  | Allows transfer only to approved countries ensuring similar protection levels. |
+| **Focus on Automation**    | Addresses rights related to automated decision-making and profiling.             | Lacks specific provisions for automated decision-making.                   |
+
+
+
+
+# Gig workers India and the UK {.unlisted}
+
+## India
+- **Digital Personal Data Protection Act (DPDPA), 2023**:
+  - Applies to the processing of digital personal data within India.
+  - Requires consent for data processing and mandates data fiduciaries to implement security safeguards. [oai_citation_attribution:1‡Meity](https://www.meity.gov.in/content/digital-personal-data-protection-act-2023?utm_source=chatgpt.com)
+- **Challenges**:
+  - Awareness among gig workers about data rights remains low.
+  - Enforcement mechanisms are still developing.
+
+## United Kingdom
+- **General Data Protection Regulation (GDPR)**:
+  - Grants individuals rights over their personal data, including access, rectification, and erasure.
+  - Applies to all organizations processing personal data of UK residents.
+- **Challenges**:
+  - Gig platforms have been criticized for obstructing data subject access requests (DSARs).
+  - Concerns about invasive surveillance practices persist.
+
+
+
+# Algorithmic Control
+
+## India
+- **Current Practices**:
+  - Platforms use algorithms for task assignments and performance evaluations.
+  - Lack of transparency in decision-making processes.
+- **Challenges**:
+  - Workers have limited recourse to contest algorithmic decisions.
+  - Significant control exerted by platforms over worker autonomy.
+
+## United Kingdom
+- **Current Practices**:
+  - Similar reliance on algorithmic management for task allocation and monitoring.
+- **Challenges**:
+  - Workers raise concerns about fairness and lack of transparency.
+  - Legal actions initiated to demand algorithmic accountability.
+
+
