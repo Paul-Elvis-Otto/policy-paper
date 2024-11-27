@@ -51,9 +51,9 @@ How did that Happen?
 
 :::
 
-# Privacy and Algorithmic Control in the gig economy
+# Privacy and Algorithmic Control in the gig economy {auto-animate="true"}
 
-## Privacy and Algorithmic Control in the gig economy
+## Privacy and Algorithmic Control in the gig economy {auto-animate="true"}
 
 :::{.r-fit-text}
 
@@ -102,12 +102,26 @@ Lack of regulatory protections
 
 
 :::{.incremental}
-- Personal data Protection 
-    - DPDPA
 
-- Non personal data protection
-    - DAU policy
+We can differentiate between the following two types
 :::
+
+. . .
+
+<br>
+
+<br>
+
+::: {.columns}
+::: {.column}
+Personal data Protection with the DPDPA
+:::
+::: {.column}
+Non Personal Data Protection with DAU
+:::
+:::
+
+
 
 
 ## Personal Data Protection
