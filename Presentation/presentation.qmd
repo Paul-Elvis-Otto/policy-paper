@@ -7,7 +7,7 @@ author:
 format:
     revealjs: 
         theme: serif
-        transition: slide
+
         width: 1920
         height: 1080
         toc: true
@@ -20,12 +20,37 @@ output-dir: docs
 
 # Gig Workers global and local
 
-# 
+## Gig workers Global
+
+![](icons/workerstruggles.svg){fig-align="center"}
+
+
+
+# Gig Workers in India
+
+
+#
 
 :::{.r-fit-text}
 [7 Milion]{style="color:#BF6900;"} <br>
-[Gig workers]{style="color:#62929E;"}
+[And the number is rising]{style="color:#62929E;"}
 :::
+
+##
+
+
+:::{.fragment .fade-in-turn-red}
+How did that Happen?
+:::
+
+::: {.fragment .fade-up .incremental}
+
+- Also in  India a major increase During covid
+
+- 
+
+:::
+
 
 
 
@@ -88,10 +113,19 @@ animate(animated_plot, nframes = 100, fps = 10, renderer = gifski_renderer("popu
 :::
 
 
+## Personal Data Protection
+
+![](./icons/DPDPA.png){fig-align="center"}
+
+
+## Non Personal Data Protection
 
 
 
-## Personal Data Protection - DPDPA​ 
+
+
+
+## DPDPA and DAU 
 
 | **Aspect**             | **Digital Personal Data Protection Act (DPDPA)**                                                                                     | **Data Accessibility and Use (DAU) Policy**                                                                                                                   |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -102,7 +136,7 @@ animate(animated_plot, nframes = 100, fps = 10, renderer = gifski_renderer("popu
 | **Regulatory Bodies**  | Establishes the Data Protection Board of India and designates the Telecom Disputes Settlement and Appellate Tribunal.                | Addresses mixed datasets (containing both personal and non-personal data) under personal data protection standards, aligning with practices like the GDPR in Europe. |
 
 
-## Non-personal Data Protection – DAU Policy​
+
 
 
 # Impact
@@ -159,44 +193,12 @@ Non-Personal Data (NPD)
 ## Implementation Timeline
 
 
-```{mermaid}
-timeline
-    title Timeline of Digital Personal Data Protection and Privacy Developments in India
-    2008 : Amendment to Information Technology Act, 2000 (IT Act): Obligation on companies to safeguard sensitive personal data by implementing security measures
-    2011 : Sensitive Personal Data or Information (SPDI) Rules: Minimum requirements for data protection, including privacy policies, consent for data collection/transfer, and notifications about recipients
-    2012 : Justice AP Shah Committee: Issued 9 national privacy principles; recommended overarching privacy protection law
-    2017 : Puttuswamy Judgement: Right to privacy upheld as a fundamental freedom; foundation for data protection legislation
-    2018 : Draft Personal Data Protection Bill introduced
-    2022 : Draft Data Accessibility & Use Policy (DAU Policy): Regulates non-personal data usage and maximizes access to public sector NPD
-    2022-11-18 : Ministry of Electronics and Information Technology released the Digital Personal Data Protection Bill, 2022 for public consultation
-    2023-07-05 : Cabinet approved the Digital Personal Data Protection Bill, 2023 (revised version of the 2022 bill)
-    2023-08-03 : Digital Personal Data Protection Bill, 2023 introduced in Lok Sabha (lower house of Parliament of India)
-    2023-08-07 : Digital Personal Data Protection Bill, 2023 passed by Lok Sabha
-    2023-08-09 : Digital Personal Data Protection Bill, 2023 introduced and passed by Rajya Sabha (upper house of Parliament of India)
-    2023-08-11 : President of India gave assent to the Digital Personal Data Protection Bill, 2023, making it the Digital Personal Data Protection Act, 2023
-
-```
-
-
-# 
-
 ![](https://mermaid.ink/img/pako:eNqdVU2P2zYQ_SsDHQovYKNeL4pNlJMb97BF0xrrzaXwZUyOpGkoUuWHt26Q_54hbWvjoEHrGj6I4nDemzePo4-Vcpqquorck2FLWwvyixwNwdPpHbgGVtxyRANr8sFZeVhhRFh7F0lFdhbQalnyHtUBVrQn44aebAzAFh6sZjxmXsznr6CGpezpvA_RyXbjfI8lzROpzjrj2gMsVZzm-DlMHp7y6qaG33aG22Ok_JXrB7RMIWcJ2FCb0GsIZANH3hMMZ7Y6s90dgPvBUMZl20qcSp7jAXrCkDyFM8XbW6G4GbNc1uz8BeHJZr16uIHHZCjU8I4t96kHT38m9nRUQIKPBIZRrqnIokzSmcZwUm1whpUUM5W6bMjajAeVM-Z48Pvo0YaG_LQobl3khlWhEgB3LkXBVjxwRh7rWUg9P6cQWREs17DpsIO3ru85RqIaHkJIpOE12JJIKh05eeHJoll4k_PKEembhLo9efSqu-D_YgaDzyP2vWCvU4wpPGN_EBq6LbrU8MhtVwxwzpCGjowGlEqgSVZjjhM2jSfSrn8jguS3BeIfRAVDLQdT9kf47LaVxyZ-27o_sjHSj-idTor0-ehiMR4tJ5ZKUQi8Y5M98x28D2KN3LMDTFbL96dnMemj-FBYiC2ts7NLD6aALZXW9fgX9_y3RGFJXIRI4m-VjRmlvF_Xqxcus9vbWSkmWyxEf8i38qfsCu8sq1ByfuMmeTLicGlb7Ojfb3KWY3qsP4t84pQ9mUy8EHdxN5vfz-Y_CKu3uJNJEQEH6cf-aqg7mHjac-YozgrlfjclR-EhmpubL1FfzeZ3uTtXALw0OI-kX9wH2OCuQ5gY90weOpdCmXRr9IaL8_KqjK6voe-vhB4w5Mpk_oywX2V8_f-LyX1_AXjEPw54riwNw3WVlcG3lknI-ssoaFHGYMY4DuwrezsVr3_Ik4Ljfzt6mvyLu2pa9SSGZi2fqI-Z67aSDD1tq1oeNTUontxWW_tJQjFFtzlYVdXRJ5pW3qW2q-oGTZBVGuQC0oqx9difQ-Tz8btz_RhEmuXmvTt-E8XyDbfVp88OqXCn?type=png)
-
-
-## Timeline
-
-<script src="https://gist.github.com/Paul-Elvis-Otto/98b41830c24569b87704cddf9f93928a.js"></script>
 
 
 # Implementation
 
 ![](icons/institution_icon.svg){.nostretch fig-align="right" width="500px"}
-
-
-
-
-
-
 
 
 ## Strength of Institutions in India
@@ -256,6 +258,22 @@ ggplot(data, aes(x = x, y = y)) +
 ## Stakeholders
 
 ![](https://mermaid.ink/img/pako:eNp9UsGK20AM_RV1Trsm0Htu6e4SCg0NG8pC8UWZUexhPZKRx25NyL9XdpZtadzal9Hw9Ebv6Z2dl0Bu7VLkkLAtWUUy3BXFIeMr1dIEUtgwNmMXu6K4LxnsiwHui-KFoMaBINcErfwgXUHqsZ7_D0Vxd8W-4c_nrQyknIgz7CLHLmuk7nL5C_WIGWGvksnnKAzIAR7Go01xIN9rzCM8_WxJ823rNlbw5IUljbBvMJ9EU_dxU1VKFWbR244H6f8geleFStDI8ThGrsBYwNfIFS1o-szZNOE0KTbwVSs0YXO58FgcYgMH8ZFMxP-xG4-BUvTdrP-ZOkL1Nemy6BfRVzPomVo1JGcjHeja-o0X-fcaB_QjbMIgfjpsVfr2FvcFj2bRv2BXw3ZULzoT-mnFZsu8QkmJ1E_lJwlviy_ZrZxdJ4zBMnieKEpncUpUurUdA52wb3LpSr4YFPssh5G9W2ftaeVsmKp26xM2nVV9GzDTY8RKMb3ftsjfRX7XFKJFYXdN_Rz-yy8EVgK7?type=png)
+
+
+
+## What comes first? Social security or Privacy?​
+
+
+:::{.incremental}
+- No protection under labour legislations ​
+​
+- Ambiguous definition under Code of Social Security, 2020 (yet to be enforced)​
+​
+- Data protection for employees but what about gig workers? And the regulation of their "aggregators"? ​
+​
+- Certain protections listed for "employees", but the exploitation of gig workers is "legitimate use"
+:::
+
 
 
 
