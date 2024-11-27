@@ -36,7 +36,7 @@ output-dir: docs
 [And the number is rising]{style="color:#62929E;"}
 :::
 
-##
+## Gig Workers in India
 
 
 :::{.fragment .fade-in-turn-red}
@@ -51,50 +51,47 @@ How did that Happen?
 
 :::
 
+# Privacy and Algorithmic Control in the gig economy
+
+## Privacy and Algorithmic Control in the gig economy
+
+:::{.r-fit-text}
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Algoritmic surveilance and Control
+:::
+:::
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Privacy Violations, Opacity and Power Inbalenaces
+:::
+:::
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Surveilance Capitalism
+:::
+:::
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Lack of regulatory protections
+:::
+:::
+:::
 
 
+:::
 
-#
-
-```{r}
-#| eval: false
-#| freeze: true
-library(ggplot2)
-library(gganimate)
-library(dplyr)
-library(gifski)
-
-# Define the years and corresponding population projections
-years <- 2020:2030
-population <- seq(7, 33, length.out = length(years)) * 1e6  # Population in millions
-
-# Create a data frame
-population_data <- data.frame(
-  Year = years,
-  Population = population
-)
-
-# Create the static plot
-p <- ggplot(population_data, aes(x = Year, y = Population)) +
-  geom_line(color = "blue", size = 1) +
-  geom_point(color = "red", size = 2) +
-  scale_y_continuous(labels = scales::comma) +
-  labs(
-    title = 'Projected Population Growth: {frame_time}',
-    x = 'Year',
-    y = 'Population',
-    caption = 'Source: Modeled Data'
-  ) +
-  theme_minimal()
-
-# Animate the plot
-animated_plot <- p +
-  transition_reveal(Year)
-
-# Render and save the animation
-animate(animated_plot, nframes = 100, fps = 10, renderer = gifski_renderer("population_growth.gif"))
-
-```
 
 
 
@@ -201,24 +198,9 @@ Non-Personal Data (NPD)
 ![](icons/institution_icon.svg){.nostretch fig-align="right" width="500px"}
 
 
-## Strength of Institutions in India
-
-:::{.fragment .fade-in-then-semi-out}
-|                   | Democracy          | Non-Democracy     |
-|-------------------|--------------------|-------------------|
-| **Strong Institutions** |                    |                   |
-| **Weak Institutions**   | India             |                   |
-:::
 
 
 
-::: {.fragment .fade-in}
-::: {.fragment .highlight-red}
-India is a **democracy with weak institutions**
-
-- The gig economy’s growth exacerbates existing challenges in labor rights, data privacy, and algorithmic control.
-:::
-:::
 
 ## Strength of Institutions in India
 
@@ -275,7 +257,20 @@ ggplot(data, aes(x = x, y = y)) +
 :::
 
 
+## Gaps in Existing Policy Instruments​
 
+**Personal Data**
+
+- Contains provisions related to ‘legitimate reason’ to access and process data without consent - allows for the automatic processing of a data principal’s personal data for the purposes of employment, including recruitment, verification of attendance and assessment of performance, among others.
+
+- Data can also be processed without consent for ‘reasonable purposes’ like fraud prevention.
+
+
+**Non Personal Data**
+
+- Aims to maximise NPD processing and commercialisation, but overrides privacy concerns owing to the possibility of de-anonymisation of data to link it to specific workers.​
+
+- Categorises inferred and derived data to be private NPD, where platform companies would have ownership of the intellectual property - dearth of entitlements regarding workers’ collective rights over controlling the narrative that such inferred data may present about them. ​
 
 
 # Comparative Views and Approaches
