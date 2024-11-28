@@ -1,0 +1,12 @@
+project:
+  title: "Policy-Paper-Script"
+format:
+  typst: 
+    toc: false
+
+  html: 
+    toc: true
+    
+    
+
+
